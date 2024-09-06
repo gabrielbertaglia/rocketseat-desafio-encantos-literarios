@@ -1,0 +1,16 @@
+& .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 200ms ease;
+
+  padding-top: 56px;
+}
+
+& .logo {
+  background-image: url('/assets/logo-horizontal.svg');
+  width: 230px;
+  height: 58px;
+
+}
+
