@@ -1,0 +1,53 @@
+#receive-monthly {
+  height: 400px;
+  max-width: 1200px;
+  margin-inline: auto;
+  position: relative;
+
+ & h5 {
+    font: var(--subtitle);
+    text-align: center;
+
+    & strong {
+      font-weight: var(--fw-bold);
+      color: var(--blue-light);
+    }
+  }
+
+  & .spellbook,
+  & .crystal-ball,
+  & .planchette {
+    position: absolute;
+  }
+
+  & .spellbook, .planchette{
+    width: 80px;
+    height: 80px;
+  }
+
+  & .crystal-ball{
+    width: 72px;
+    height: 72px;
+  }
+
+  & .spellbook {
+    position: absolute;
+    top: -55px;
+    right: 50%;
+    rotate: 20.76deg;
+  }
+
+  & .crystal-ball {
+    position: absolute;
+    top: 30%;
+    right: 0px;
+    rotate: -15deg;
+  }
+
+  & .planchette {
+    position: absolute;
+    top: 28%;
+    left: 40px;
+    rotate: 110deg;
+  }
+}
