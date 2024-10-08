@@ -1,138 +1,160 @@
 #monthly-kit {
+  padding-top: 14.6875rem;
   text-align: center;
-  /* padding-top: 265px; */
-  /* overflow-x: hidden; */
-  height: 960px;
-  /* max-width: 1440px;
-  min-width: 1440px; */
 
-  & h3 {
+  & > h2 {
+    font: var(--title-sm);
+    color: var(--text-title);
     display: flex;
-      align-items: center;
-      justify-content: center;
-    & img {
-      width: 32px;
-        height: 32px;
-      filter: brightness(0) saturate(100%) invert(40%) sepia(14%) saturate(2437%) hue-rotate(244deg) brightness(87%) contrast(95%) drop-shadow(0px 0px 10px rgb(149, 71, 165));
+    margin-inline: auto;
+    max-width: 26.5625rem;
+    gap: 1rem;
 
-
-    }
-
-    & img:nth-child(1) {
-      margin-right: 16px;
-    }
-
-    & img:nth-child(2) {
-      margin-left: 16px;
+    &>img {
+      width: 2rem;
     }
   }
 
-  &>p {
-    font: var(--body-lg-regular);
-    padding-top: 5px;
-    padding-bottom: 64px;
+  & > p {
+    font: var(--body-md);
+    color: var(--text-body);
+    padding-block: 0.3125rem 5.5rem;
   }
 
-  & .book-kit-container {
-    padding-top: 164px;
-  }
-
-  & .book-kit-content {
-    position: relative;
-    width: 54rem;
-    width: auto;
-      margin: 0 auto;
-
-    & p {
-      font-size: var(--body-md-regular);
-    }
-
-    & img[src*="book.png"] {
-      width: 467px;
-        height: 563px;
-        margin: auto;
-    }
-
-    & img[src*="bookmark-yellow.png"] {
-      position: absolute;
-        max-width: 172px;
-        object-fit: cover;
-        min-height: 536px;
-        rotate: 12deg;
-        top: -15%;
-        right: 23.9%;
-        z-index: -1;
-    }
-
-    & img[src*="bookmark-purple"] {
-      position: absolute;
-
-      max-width: 172px;
-        max-height: 536px;
-        min-height: 536px;
-
-        rotate: 22deg;
-        right: 16.5%;
-        z-index: -2;
-    }
-
-    & .hardback {
-      position: absolute;
-      top: -5%;
-        left: 23%;
-        z-index: 1;
-
-        & .livro-capa-dura {
-          position: absolute;
-          left: -30%;
-          top: -40px;
+  & .book-container {
+    &:hover {
+      & .book-content {
+        & p:first-child {
+          transform: translate(-190%, -700%);
         }
 
-      & img[src*="seta-livro-em-capa-dura.svg"] {
-        width: 174.5px;
-          height: auto;
+        & img[src*="arrow-from-book"] {
+          transform: translate(-115%, -500%);
+        }
+
+        &>img[src*="bookmark-yellow"] {
+          transform: translate(65%, -20%) rotate(12deg);
+        }
+
+        &>img[src*="bookmark-purple"] {
+          transform: translate(123%, -2%) rotate(22deg);
+        }
+
+        &>img[src*="arrow-from-purple-bookmark"] {
+          transform: translate(160%, 80%);
+        }
+
+        & p:nth-child(7) {
+          transform: translate(105%, 800%);
+        }
+
+        & p:nth-child(8) {
+          transform: translateX(-210%);
+        }
+
+        &>img[src*="arrow-from-pin"] {
+          transform: translate(-308%, 0%) !important;
+        }
+
+        &>img[src*="pin"] {
+          transform: translate(-72%, 28%) rotate(-8deg);
+        }
       }
     }
 
-    & .exclusive-brooch {
+    & .book-content {
+      position: relative;
+      width: 54.9375rem;
+      margin: auto;
+
+      & img[src$="book-kit/book.svg"] {
+        padding-block: 8.375rem 10.5625rem;
+        width: 29.1875rem;
+      }
 
       & p {
+        font: var(--body-md);
+        color: var(--text-title);
+      }
+
+      .hardback-book {
         position: absolute;
-        top: 47%;
-        left: 19%;
+        top: 25%;
+        left: 30%;
+        z-index: -1;
+        transition: all 400ms;
       }
 
-      & img[src*="seta-broche-exclusivo.svg"] {
-        width: 104.55px;
-        height: auto;
-        z-index: 1;
+      & img[src*="arrow-from-book"] {
+        width: 10.9375rem;
         position: absolute;
-        left: 20%;
-        bottom: 24%;
+        top: 30%;
+        left: 30%;
+        z-index: -1;
+        transition: all 400ms;
       }
 
-      & img[src*="pin.png"] {
-        width: 222px;
-          height: auto;
-          position: absolute;
-          rotate: -8deg;
-          z-index: -1;
-          bottom: -12%;
-          left: 23%;
+      &>img[src*="bookmark"] {
+        width: 13.75rem;
+        position: absolute;
+        left: 53%;
+        top: 15%;
       }
 
+      &>img[src*="bookmark-yellow"] {
+        z-index: -1;
+        transition: all 400ms;
+      }
+
+      &>img[src*="bookmark-purple"] {
+        z-index: -2;
+        transition: all 400ms;
+      }
+
+      &>img[src*="arrow-from-purple-bookmark"] {
+        width: 9.0625rem;
+        position: absolute;
+        left: 57%;
+        top: 60%;
+        z-index: -2;
+
+        transition: all 400ms;
+      }
+
+      .thematic-bookmark {
+        position: absolute;
+        top: 72%;
+        left: 53%;
+        z-index: -1;
+        transition: all 400ms;
+      }
+
+      .exclusive-brooch {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        z-index: -1;
+        transition: all 400ms;
+      }
+
+      &>img[src*="arrow-from-pin"] {
+        width: 6.5625rem !important;
+        position: absolute !important;
+        left: 40% !important;
+        top: 54% !important;
+        z-index: -2 !important;
+
+        transition: all 400ms;
+      }
+
+      &>img[src*="pin"] {
+        width: 13.875rem;
+        position: absolute;
+        left: 26%;
+        top: 55%;
+        z-index: -1;
+        transition: all 400ms;
+      }
     }
-
-    .themed-bookmark {
-      position: absolute;
-      margin: auto;
-      right: 20%;
-        bottom: -17%;
-
-      & img[src*="seta-marca-pagina.svg"] {
-        width: 145.45px;
-      }
-    }
-
   }
 }
