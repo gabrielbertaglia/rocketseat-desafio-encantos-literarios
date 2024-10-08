@@ -4,7 +4,7 @@
   margin-inline: auto;
   position: relative;
 
- & h5 {
+  & h5 {
     font: var(--subtitle);
     text-align: center;
 
@@ -14,40 +14,86 @@
     }
   }
 
+  & img {
+    scale: 0;
+    transition: all 500ms;
+
+    &:hover {
+      rotate: 10deg;
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+  }
+
   & .spellbook,
   & .crystal-ball,
   & .planchette {
     position: absolute;
   }
 
-  & .spellbook, .planchette{
+  & .spellbook,
+  .planchette {
     width: 80px;
     height: 80px;
   }
 
-  & .crystal-ball{
-    width: 72px;
-    height: 72px;
-  }
+  & .planchette {}
 
   & .spellbook {
     position: absolute;
     top: -55px;
     right: 50%;
-    rotate: 20.76deg;
+    /* rotate: 20.76deg; */
+
   }
 
   & .crystal-ball {
+    width: 72px;
+    height: 72px;
     position: absolute;
     top: 30%;
     right: 0px;
     rotate: -15deg;
+
   }
 
   & .planchette {
-    position: absolute;
     top: 28%;
     left: 40px;
     rotate: 110deg;
+
+    &:hover {
+      rotate: 120deg;
+    }
+  }
+
+
+  &:hover {
+    .planchette {
+      transition: all 500ms, scale 500ms 500ms;
+      scale: 1;
+    }
+
+    .crystal-ball {
+      transition: all 500ms, scale 500ms 1s;
+      scale: 1;
+    }
+
+    .spellbook {
+      scale: 1;
+      /* height: 88px;
+      width: 88px; */
+    }
   }
 }
+
+/* @keyframes colorTextBody {
+  to {
+    color: var(--color-text-body);
+  }
+}
+@keyframes colorBlue {
+  to {
+    color: var(--color-blue-light);
+  }
+} */
